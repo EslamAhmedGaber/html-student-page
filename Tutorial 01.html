@@ -1,0 +1,3172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technical Concepts and Tips</title>
+    
+    <!-- Linking Google Fonts for typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Styling for the page -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            color: #005B96;
+        }
+
+        header {
+            background: #005B96;
+            color: #005B96; /* Changed to match background color */
+            padding: 3rem 2rem; /* Increased padding for taller header */
+            text-align: center;
+        }
+
+        header h1, header h3 {
+            color: #ffffff; /* Changed to white for visibility */
+            margin: 0; /* Remove default margins */
+        }
+
+        header h1 {
+            font-size: 2.5em; /* Larger font size for main title */
+            margin-bottom: 0.5em; /* Add some space between title and subtitle */
+        }
+
+
+        footer {
+            background: #005B96;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container {
+            padding: 1.5rem 2rem;
+        }
+
+        .important-tip, .quick-tip {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .important-tip {
+            background-color: #E6F7FF;
+            border-left: 5px solid #005B96;
+        }
+
+        .quick-tip {
+            background-color: #CFFFD3;
+            border-left: 5px solid #006400;
+        }
+
+        .example-box {
+            background-color: #FFE699;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+
+        .explanation {
+            background-color: #CFFFD3;
+            border-left: 5px solid black;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+
+        /* Code styling */
+        code {
+            background-color: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        .diagram {
+            display: block;
+            margin: 1rem auto;
+            max-width: 100%;
+        }
+
+        .table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .table th {
+            background-color: #005B96;
+            color: white;
+        }
+
+        /* Interactive section */
+        .interactive-section {
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Technical Concepts and Tips</h1>
+    <h3>Prepared by Eng. Eslam Ahmed</h3>
+</header>
+
+<div class="container">
+    <h2>Foundational Concepts in Computing</h2>
+    <section>
+        <div class="explanation">
+            <strong>Explanation:</strong> In computer science and programming, several fundamental terms provide the basis for understanding how computers process data.
+        </div>
+
+        <ul>
+            <li><strong>Algorithm:</strong> A step-by-step procedure or set of rules to solve a specific problem or task.</li>
+
+            <div class="example-box">
+                Example: Real-Life Algorithm:
+                <br> A recipe for cooking spaghetti is a simple algorithm. It follows steps: Boil water, add pasta, cook for 10 minutes, drain, and serve.
+            </div>
+
+            <li><strong>Program:</strong> A representation of an algorithm in a form that a computer can execute.</li>
+            <li><strong>Programming:</strong> The process of writing code to implement an algorithm.</li>
+            <li><strong>Software:</strong> Programs and algorithms that are executed on hardware.</li>
+            <li><strong>Hardware:</strong> The physical components of a computer system, such as the CPU, memory, and storage devices.</li>
+        </ul>
+
+        <div class="important-tip">
+            <strong>Important Tip:</strong> After designing an algorithm, programming is necessary to implement it into a functional system.
+        </div>
+    </section>
+</div>
+
+<footer>
+    &copy; 2024 Prepared by Eng. Eslam Ahmed - Page 1
+</footer>
+
+</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technical Concepts and Tips</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Chart.js for dynamic visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Styling -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #005B96;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        footer {
+            background: #005B96;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container {
+            padding: 1.5rem 2rem;
+        }
+
+        h1, h2, h3 {
+            color: #005B96;
+        }
+
+        .important-tip, .quick-tip {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .important-tip {
+            background-color: #E6F7FF;
+            border-left: 5px solid #005B96;
+        }
+
+        .quick-tip {
+            background-color: #CFFFD3;
+            border-left: 5px solid #006400;
+        }
+
+        .example-box {
+            background-color: #FFE699;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+
+        .explanation {
+            background-color: #CFFFD3;
+            border-left: 5px solid black;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        .diagram {
+            display: block;
+            margin: 1rem auto;
+            max-width: 100%;
+        }
+
+        .table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .table th {
+            background-color: #005B96;
+            color: white;
+        }
+
+        .interactive-section {
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Technical Concepts and Tips</h1>
+    <h3>Prepared by Eng. Eslam Ahmed</h3>
+</header>
+
+<div class="container">
+    <h2>Digital Logic and Memory</h2>
+    <section>
+        <div class="explanation">
+            <strong>Explanation:</strong> Boolean operations form the basis of logical decision-making in computers. These operations work on binary values (true/false, or 1/0) and are implemented using logic gates.
+        </div>
+
+        <ul>
+            <li><strong>AND, OR, XOR, NOT:</strong> These are the four primary Boolean operations used to manipulate true/false values.</li>
+            <li><strong>Logic Gates:</strong> Physical devices that perform Boolean operations. Common gates include AND, OR, XOR, and NOT gates.</li>
+        </ul>
+
+        <!-- Truth Table for AND Operation -->
+        <div class="interactive-section">
+            <h3>Truth Table: AND Operation</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Input A</th>
+                        <th>Input B</th>
+                        <th>Output (A AND B)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Dynamic Chart for Boolean Operations -->
+        <div class="interactive-section">
+            <h3>Interactive Chart: Boolean Operations</h3>
+            <canvas id="booleanChart"></canvas>
+        </div>
+
+        <script>
+            // Data for boolean chart (AND, OR, XOR)
+            const ctx = document.getElementById('booleanChart').getContext('2d');
+            const booleanChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['AND', 'OR', 'XOR'],
+                    datasets: [{
+                        label: 'True Outcomes (1)',
+                        data: [1, 3, 2],  // Example data for 1's in each operation
+                        backgroundColor: ['#005B96', '#008B8B', '#FF6347'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        </script>
+
+        <div class="important-tip">
+            <strong>Important Tip:</strong> Boolean operations are frequently used to control the flow of algorithms, especially in conditions and loops.
+        </div>
+
+        <div class="example-box">
+            Example: Boolean Expression:
+            <br> Solve the Boolean expression: <code>A AND (B OR NOT C)</code> for A=1, B=0, C=1.
+        </div>
+
+        <div class="quick-tip">
+            <strong>Quick Tip:</strong> Flip-flops can be combined in large numbers to form the memory cells found in RAM and other storage devices.
+        </div>
+    </section>
+</div>
+
+<footer>
+    &copy; 2024 Prepared by Eng. Eslam Ahmed - Page 2
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technical Concepts and Tips</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Chart.js for dynamic visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Styling -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #005B96;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        footer {
+            background: #005B96;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container {
+            padding: 1.5rem 2rem;
+        }
+
+        h1, h2, h3 {
+            color: #005B96;
+        }
+
+        .important-tip, .quick-tip {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .important-tip {
+            background-color: #E6F7FF;
+            border-left: 5px solid #005B96;
+        }
+
+        .quick-tip {
+            background-color: #CFFFD3;
+            border-left: 5px solid #006400;
+        }
+
+        .example-box {
+            background-color: #FFE699;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+
+        .explanation {
+            background-color: #CFFFD3;
+            border-left: 5px solid black;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        .diagram {
+            display: block;
+            margin: 1rem auto;
+            max-width: 100%;
+        }
+
+        .table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .table th {
+            background-color: #005B96;
+            color: white;
+        }
+
+        /* Flip-Flop Interactive Section */
+        .interactive-flipflop {
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Technical Concepts and Tips</h1>
+    <h3>Prepared by Eng. Eslam Ahmed</h3>
+</header>
+
+<div class="container">
+    <h2>Digital Logic and Memory</h2>
+    
+    <h3>Flip-Flops and Memory Cells</h3>
+    <div class="explanation">
+        <strong>Explanation:</strong> Flip-flops are fundamental components in computer memory that can store a single bit of data. Combined, flip-flops form the building blocks of memory cells.
+    </div>
+
+    <ul>
+        <li><strong>Flip-Flop:</strong> A circuit built from logic gates that can store one bit of data.</li>
+        <li><strong>Memory Cell:</strong> A group of flip-flops used to store multiple bits, typically 8 bits (1 byte).</li>
+    </ul>
+
+    <!-- SR Flip-Flop Simulation -->
+    <div class="interactive-flipflop">
+        <h3>Interactive Flip-Flop Simulation</h3>
+        <p>Toggle the inputs to see how the flip-flop stores data:</p>
+        
+        <form id="flipflopForm">
+            <label for="set">Set (S):</label>
+            <input type="checkbox" id="set" name="set">
+            
+            <label for="reset">Reset (R):</label>
+            <input type="checkbox" id="reset" name="reset">
+            
+            <button type="button" onclick="simulateFlipFlop()">Simulate</button>
+        </form>
+
+        <div id="flipFlopOutput" class="important-tip">
+            <strong>Flip-Flop Output:</strong> 
+            <span id="outputQ">Q = ?</span>
+        </div>
+    </div>
+
+    <script>
+        function simulateFlipFlop() {
+            const set = document.getElementById('set').checked;
+            const reset = document.getElementById('reset').checked;
+            let outputQ;
+
+            if (set && !reset) {
+                outputQ = "1 (Set)";
+            } else if (!set && reset) {
+                outputQ = "0 (Reset)";
+            } else if (!set && !reset) {
+                outputQ = "No Change";
+            } else {
+                outputQ = "Invalid";
+            }
+
+            document.getElementById('outputQ').innerText = `Q = ${outputQ}`;
+        }
+    </script>
+
+    <div class="important-tip">
+        <strong>Important Tip:</strong> Flip-flops can store binary data and are used in various memory storage systems.
+    </div>
+
+    <!-- Visualizing Truth Table for SR Flip-Flop -->
+    <div class="interactive-section">
+        <h3>Truth Table: SR Flip-Flop</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>S</th>
+                    <th>R</th>
+                    <th>Output (Q)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>No Change</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>Invalid</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="quick-tip">
+        <strong>Quick Tip:</strong> Use flip-flop circuits in storage systems for fast and reliable binary data retention.
+    </div>
+</div>
+
+<footer>
+    &copy; 2024 Prepared by Eng. Eslam Ahmed - Page 3
+</footer>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technical Concepts and Tips</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Chart.js for dynamic visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Styling -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #005B96;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        footer {
+            background: #005B96;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container {
+            padding: 1.5rem 2rem;
+        }
+
+        h1, h2, h3 {
+            color: #005B96;
+        }
+
+        .important-tip, .quick-tip {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .important-tip {
+            background-color: #E6F7FF;
+            border-left: 5px solid #005B96;
+        }
+
+        .quick-tip {
+            background-color: #CFFFD3;
+            border-left: 5px solid #006400;
+        }
+
+        .example-box {
+            background-color: #FFE699;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+
+        .explanation {
+            background-color: #CFFFD3;
+            border-left: 5px solid black;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        .diagram {
+            display: block;
+            margin: 1rem auto;
+            max-width: 100%;
+        }
+
+        .table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .table th {
+            background-color: #005B96;
+            color: white;
+        }
+
+        .interactive-section {
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Technical Concepts and Tips</h1>
+    <h3>Prepared by Eng. Eslam Ahmed</h3>
+</header>
+
+<div class="container">
+    <h2>Binary Arithmetic and Number Representation</h2>
+
+    <h3>Binary Conversion</h3>
+    <div class="explanation">
+        <strong>Explanation:</strong> Binary notation is used to represent numbers in base-2. Understanding how to convert between binary and decimal is essential for computer science.
+    </div>
+
+    <!-- Binary to Decimal Converter -->
+    <div class="interactive-section">
+        <h3>Interactive Binary to Decimal Converter</h3>
+        <form id="binaryForm">
+            <label for="binaryInput">Enter a binary number:</label>
+            <input type="text" id="binaryInput" name="binaryInput" placeholder="e.g., 1010">
+            <button type="button" onclick="binaryToDecimal()">Convert</button>
+        </form>
+        <div class="important-tip">
+            <strong>Converted Decimal Value:</strong> 
+            <span id="decimalOutput">Decimal = ?</span>
+        </div>
+    </div>
+
+    <!-- Script for binary to decimal conversion -->
+    <script>
+        function binaryToDecimal() {
+            const binaryInput = document.getElementById('binaryInput').value;
+            const decimalValue = parseInt(binaryInput, 2);
+            if (isNaN(decimalValue)) {
+                document.getElementById('decimalOutput').innerText = "Invalid binary number";
+            } else {
+                document.getElementById('decimalOutput').innerText = `Decimal = ${decimalValue}`;
+            }
+        }
+    </script>
+
+    <!-- Hexadecimal Conversion -->
+    <h3>Hexadecimal Conversion</h3>
+    <div class="explanation">
+        <strong>Explanation:</strong> Hexadecimal notation (base-16) is a compact way to represent binary numbers, commonly used in programming and memory addressing.
+    </div>
+
+    <!-- Hexadecimal to Binary Converter -->
+    <div class="interactive-section">
+        <h3>Interactive Hexadecimal to Binary Converter</h3>
+        <form id="hexForm">
+            <label for="hexInput">Enter a hexadecimal number:</label>
+            <input type="text" id="hexInput" name="hexInput" placeholder="e.g., 1A3">
+            <button type="button" onclick="hexToBinary()">Convert</button>
+        </form>
+        <div class="important-tip">
+            <strong>Converted Binary Value:</strong> 
+            <span id="binaryOutput">Binary = ?</span>
+        </div>
+    </div>
+
+    <!-- Script for hexadecimal to binary conversion -->
+    <script>
+        function hexToBinary() {
+            const hexInput = document.getElementById('hexInput').value;
+            const binaryValue = parseInt(hexInput, 16).toString(2);
+            if (isNaN(parseInt(hexInput, 16))) {
+                document.getElementById('binaryOutput').innerText = "Invalid hexadecimal number";
+            } else {
+                document.getElementById('binaryOutput').innerText = `Binary = ${binaryValue}`;
+            }
+        }
+    </script>
+
+    <div class="important-tip">
+        <strong>Important Tip:</strong> Always remember that hexadecimal is used because it provides a compact way to represent large binary numbers, commonly in system programming and debugging.
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2024 Prepared by Eng. Eslam Ahmed - Page 4
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technical Concepts and Tips</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Chart.js for dynamic visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Styling -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #005B96;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        footer {
+            background: #005B96;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container {
+            padding: 1.5rem 2rem;
+        }
+
+        h1, h2, h3 {
+            color: #005B96;
+        }
+
+        .important-tip, .quick-tip {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .important-tip {
+            background-color: #E6F7FF;
+            border-left: 5px solid #005B96;
+        }
+
+        .quick-tip {
+            background-color: #CFFFD3;
+            border-left: 5px solid #006400;
+        }
+
+        .example-box {
+            background-color: #FFE699;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+
+        .explanation {
+            background-color: #CFFFD3;
+            border-left: 5px solid black;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        .diagram {
+            display: block;
+            margin: 1rem auto;
+            max-width: 100%;
+        }
+
+        .table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .table th {
+            background-color: #005B96;
+            color: white;
+        }
+
+        .interactive-section {
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Technical Concepts and Tips</h1>
+    <h3>Prepared by Eng. Eslam Ahmed</h3>
+</header>
+
+<div class="container">
+    <h2>Floating-Point Representation</h2>
+    <div class="explanation">
+        <strong>Explanation:</strong> Floating-point numbers allow computers to represent real numbers with decimals. However, precision errors can occur due to the limitations of how these numbers are stored.
+    </div>
+
+    <!-- Floating-Point Conversion -->
+    <div class="interactive-section">
+        <h3>Interactive Floating-Point to Decimal Converter</h3>
+        <form id="floatForm">
+            <label for="floatInput">Enter a floating-point number:</label>
+            <input type="text" id="floatInput" name="floatInput" placeholder="e.g., 0.1 + 0.2">
+            <button type="button" onclick="calculateFloat()">Convert</button>
+        </form>
+        <div class="important-tip">
+            <strong>Calculated Result:</strong> 
+            <span id="floatOutput">Result = ?</span>
+        </div>
+    </div>
+
+    <!-- Script for floating-point conversion -->
+    <script>
+        function calculateFloat() {
+            const floatInput = document.getElementById('floatInput').value;
+            try {
+                const result = eval(floatInput);
+                document.getElementById('floatOutput').innerText = `Result = ${result}`;
+            } catch (e) {
+                document.getElementById('floatOutput').innerText = "Invalid expression";
+            }
+        }
+    </script>
+
+    <!-- Floating-Point Precision Error Visualization -->
+    <div class="interactive-section">
+        <h3>Visualizing Floating-Point Precision Error</h3>
+        <canvas id="precisionErrorChart"></canvas>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('precisionErrorChart').getContext('2d');
+        const precisionErrorChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [0.1, 0.2, 0.3, 0.4, 0.5],
+                datasets: [{
+                    label: 'Floating-Point Values',
+                    data: [0.1, 0.2, 0.30000001, 0.40000003, 0.5], // Simulated precision error
+                    borderColor: '#FF6347',
+                    fill: false
+                }, {
+                    label: 'Expected Values',
+                    data: [0.1, 0.2, 0.3, 0.4, 0.5],
+                    borderColor: '#005B96',
+                    fill: false
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+    <div class="important-tip">
+        <strong>Important Tip:</strong> Floating-point precision errors are common in scientific computing, and understanding them is critical when working with simulations or financial applications.
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2024 Prepared by Eng. Eslam Ahmed - Page 5
+</footer>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technical Concepts and Tips</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Chart.js for dynamic visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Styling -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #005B96;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        footer {
+            background: #005B96;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container {
+            padding: 1.5rem 2rem;
+        }
+
+        h1, h2, h3 {
+            color: #005B96;
+        }
+
+        .important-tip, .quick-tip {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .important-tip {
+            background-color: #E6F7FF;
+            border-left: 5px solid #005B96;
+        }
+
+        .quick-tip {
+            background-color: #CFFFD3;
+            border-left: 5px solid #006400;
+        }
+
+        .example-box {
+            background-color: #FFE699;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+
+        .explanation {
+            background-color: #CFFFD3;
+            border-left: 5px solid black;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        .diagram {
+            display: block;
+            margin: 1rem auto;
+            max-width: 100%;
+        }
+
+        .table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .table th {
+            background-color: #005B96;
+            color: white;
+        }
+
+        .interactive-section {
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Technical Concepts and Tips</h1>
+    <h3>Prepared by Eng. Eslam Ahmed</h3>
+</header>
+
+<div class="container">
+    <h2>Binary Arithmetic</h2>
+    <div class="explanation">
+        <strong>Explanation:</strong> Binary arithmetic operates with binary numbers (0s and 1s). Understanding how binary addition works is fundamental in digital circuits and computer systems.
+    </div>
+
+    <!-- Binary Addition Simulator -->
+    <div class="interactive-section">
+        <h3>Interactive Binary Addition</h3>
+        <form id="binaryAdditionForm">
+            <label for="binaryInput1">Enter the first binary number:</label>
+            <input type="text" id="binaryInput1" name="binaryInput1" placeholder="e.g., 1101">
+            <br>
+            <label for="binaryInput2">Enter the second binary number:</label>
+            <input type="text" id="binaryInput2" name="binaryInput2" placeholder="e.g., 1011">
+            <br>
+            <button type="button" onclick="performBinaryAddition()">Add</button>
+        </form>
+        <div class="important-tip">
+            <strong>Binary Addition Result:</strong> 
+            <span id="binaryAdditionResult">Result = ?</span>
+        </div>
+    </div>
+
+    <!-- Script for binary addition -->
+    <script>
+        function performBinaryAddition() {
+            const binaryInput1 = document.getElementById('binaryInput1').value;
+            const binaryInput2 = document.getElementById('binaryInput2').value;
+
+            // Validate input: make sure they're binary numbers
+            if (!/^[01]+$/.test(binaryInput1) || !/^[01]+$/.test(binaryInput2)) {
+                document.getElementById('binaryAdditionResult').innerText = "Invalid binary numbers.";
+                return;
+            }
+
+            // Convert binary strings to integers, perform addition, then convert back to binary
+            const result = (parseInt(binaryInput1, 2) + parseInt(binaryInput2, 2)).toString(2);
+
+            document.getElementById('binaryAdditionResult').innerText = `Result = ${result}`;
+        }
+    </script>
+
+    <div class="important-tip">
+        <strong>Important Tip:</strong> In binary addition, just like in decimal addition, carry occurs when the sum exceeds the base (in this case, 2).
+    </div>
+
+    <!-- Binary Addition Explanation -->
+    <h3>Binary Addition Example</h3>
+    <div class="example-box">
+        Example: Add 1101 and 1011 (in binary).
+        <br> 
+        <code>
+        1101 <br>
+        +1011 <br>
+        ------
+        11000
+        </code>
+        <br> Explanation: In binary, 1 + 1 equals 10, so we carry over the 1, just like in decimal arithmetic.
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2024 Prepared by Eng. Eslam Ahmed - Page 6
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technical Concepts and Tips</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Chart.js for dynamic visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Styling -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #005B96;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        footer {
+            background: #005B96;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container {
+            padding: 1.5rem 2rem;
+        }
+
+        h1, h2, h3 {
+            color: #005B96;
+        }
+
+        .important-tip, .quick-tip {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .important-tip {
+            background-color: #E6F7FF;
+            border-left: 5px solid #005B96;
+        }
+
+        .quick-tip {
+            background-color: #CFFFD3;
+            border-left: 5px solid #006400;
+        }
+
+        .example-box {
+            background-color: #FFE699;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+
+        .explanation {
+            background-color: #CFFFD3;
+            border-left: 5px solid black;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        .diagram {
+            display: block;
+            margin: 1rem auto;
+            max-width: 100%;
+        }
+
+        .table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .table th {
+            background-color: #005B96;
+            color: white;
+        }
+
+        .interactive-section {
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Technical Concepts and Tips</h1>
+    <h3>Prepared by Eng. Eslam Ahmed</h3>
+</header>
+
+<div class="container">
+    <h2>Binary Arithmetic</h2>
+    <div class="explanation">
+        <strong>Explanation:</strong> Binary arithmetic operates with binary numbers (0s and 1s). Understanding how binary addition works is fundamental in digital circuits and computer systems.
+    </div>
+
+    <!-- Binary Addition Simulator -->
+    <div class="interactive-section">
+        <h3>Interactive Binary Addition</h3>
+        <form id="binaryAdditionForm">
+            <label for="binaryInput1">Enter the first binary number:</label>
+            <input type="text" id="binaryInput1" name="binaryInput1" placeholder="e.g., 1101">
+            <br>
+            <label for="binaryInput2">Enter the second binary number:</label>
+            <input type="text" id="binaryInput2" name="binaryInput2" placeholder="e.g., 1011">
+            <br>
+            <button type="button" onclick="performBinaryAddition()">Add</button>
+        </form>
+        <div class="important-tip">
+            <strong>Binary Addition Result:</strong> 
+            <span id="binaryAdditionResult">Result = ?</span>
+        </div>
+    </div>
+
+    <!-- Script for binary addition -->
+    <script>
+        function performBinaryAddition() {
+            const binaryInput1 = document.getElementById('binaryInput1').value;
+            const binaryInput2 = document.getElementById('binaryInput2').value;
+
+            // Validate input: make sure they're binary numbers
+            if (!/^[01]+$/.test(binaryInput1) || !/^[01]+$/.test(binaryInput2)) {
+                document.getElementById('binaryAdditionResult').innerText = "Invalid binary numbers.";
+                return;
+            }
+
+            // Convert binary strings to integers, perform addition, then convert back to binary
+            const result = (parseInt(binaryInput1, 2) + parseInt(binaryInput2, 2)).toString(2);
+
+            document.getElementById('binaryAdditionResult').innerText = `Result = ${result}`;
+        }
+    </script>
+
+    <div class="important-tip">
+        <strong>Important Tip:</strong> In binary addition, just like in decimal addition, carry occurs when the sum exceeds the base (in this case, 2).
+    </div>
+
+    <!-- Binary Addition Explanation -->
+    <h3>Binary Addition Example</h3>
+    <div class="example-box">
+        Example: Add 1101 and 1011 (in binary).
+        <br> 
+        <code>
+        1101 <br>
+        +1011 <br>
+        ------
+        11000
+        </code>
+        <br> Explanation: In binary, 1 + 1 equals 10, so we carry over the 1, just like in decimal arithmetic.
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2024 Prepared by Eng. Eslam Ahmed - Page 6
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technical Concepts and Tips</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Chart.js for dynamic visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Styling -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #005B96;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        footer {
+            background: #005B96;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container {
+            padding: 1.5rem 2rem;
+        }
+
+        h1, h2, h3 {
+            color: #005B96;
+        }
+
+        .important-tip, .quick-tip {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .important-tip {
+            background-color: #E6F7FF;
+            border-left: 5px solid #005B96;
+        }
+
+        .quick-tip {
+            background-color: #CFFFD3;
+            border-left: 5px solid #006400;
+        }
+
+        .example-box {
+            background-color: #FFE699;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+
+        .explanation {
+            background-color: #CFFFD3;
+            border-left: 5px solid black;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        .diagram {
+            display: block;
+            margin: 1rem auto;
+            max-width: 100%;
+        }
+
+        .table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .table th {
+            background-color: #005B96;
+            color: white;
+        }
+
+        .interactive-section {
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Technical Concepts and Tips</h1>
+    <h3>Prepared by Eng. Eslam Ahmed</h3>
+</header>
+
+<div class="container">
+    <h2>Two's Complement Notation</h2>
+    <div class="explanation">
+        <strong>Explanation:</strong> Two’s complement is a mathematical operation used to represent signed integers in binary. It is the most common method used for signed number representation in computers.
+    </div>
+
+    <!-- Two's Complement Converter -->
+    <div class="interactive-section">
+        <h3>Interactive Two's Complement Converter</h3>
+        <form id="twosComplementForm">
+            <label for="decimalInput">Enter a decimal number (positive or negative):</label>
+            <input type="text" id="decimalInput" name="decimalInput" placeholder="e.g., -5">
+            <br>
+            <button type="button" onclick="convertToTwosComplement()">Convert to Two's Complement (4 bits)</button>
+        </form>
+        <div class="important-tip">
+            <strong>Two's Complement Result:</strong> 
+            <span id="twosComplementResult">Two's Complement = ?</span>
+        </div>
+    </div>
+
+    <!-- Script for Two's Complement conversion -->
+    <script>
+        function convertToTwosComplement() {
+            const decimalInput = parseInt(document.getElementById('decimalInput').value);
+            if (isNaN(decimalInput)) {
+                document.getElementById('twosComplementResult').innerText = "Invalid input.";
+                return;
+            }
+
+            // Convert to two's complement (4-bit representation)
+            const bits = 4;
+            const mask = (1 << bits) - 1;
+            const twosComplement = (decimalInput < 0 ? (mask + decimalInput + 1) : decimalInput).toString(2).padStart(bits, '0');
+
+            document.getElementById('twosComplementResult').innerText = `Two's Complement = ${twosComplement}`;
+        }
+    </script>
+
+    <!-- Two's Complement Example -->
+    <h3>Two's Complement Example</h3>
+    <div class="example-box">
+        Example: Converting -5 to Two's Complement in 4 bits.
+        <br>
+        Step 1: Write the positive version of the number (5) in binary: 0101.
+        <br>
+        Step 2: Invert the bits: 1010.
+        <br>
+        Step 3: Add 1 to the result: 1011.
+        <br> 
+        Result: The two's complement of -5 is 1011.
+    </div>
+
+    <div class="important-tip">
+        <strong>Important Tip:</strong> Two's complement allows computers to perform binary arithmetic with signed integers efficiently, avoiding the complexity of separate logic for negative and positive numbers.
+    </div>
+
+    <!-- Visualizing Hexadecimal Notation -->
+    <h2>Hexadecimal Notation</h2>
+    <div class="explanation">
+        <strong>Explanation:</strong> Hexadecimal (base-16) is often used to represent binary numbers in a more compact form. Each hex digit represents four binary bits.
+    </div>
+
+    <!-- Interactive Hexadecimal Visualization -->
+    <div class="interactive-section">
+        <h3>Interactive Hexadecimal to Binary Converter</h3>
+        <form id="hexToBinaryForm">
+            <label for="hexInput">Enter a hexadecimal number:</label>
+            <input type="text" id="hexInput" name="hexInput" placeholder="e.g., A3">
+            <button type="button" onclick="hexToBinary()">Convert to Binary</button>
+        </form>
+        <div class="important-tip">
+            <strong>Binary Result:</strong> 
+            <span id="hexBinaryResult">Binary = ?</span>
+        </div>
+    </div>
+
+    <!-- Script for Hex to Binary conversion -->
+    <script>
+        function hexToBinary() {
+            const hexInput = document.getElementById('hexInput').value;
+            const binaryValue = parseInt(hexInput, 16).toString(2);
+            if (isNaN(parseInt(hexInput, 16))) {
+                document.getElementById('hexBinaryResult').innerText = "Invalid hexadecimal number.";
+            } else {
+                document.getElementById('hexBinaryResult').innerText = `Binary = ${binaryValue}`;
+            }
+        }
+    </script>
+
+    <!-- Hexadecimal Example -->
+    <h3>Hexadecimal Example</h3>
+    <div class="example-box">
+        Example: Convert the hexadecimal number A3 to binary.
+        <br>
+        Step 1: Convert A to binary: A = 1010.
+        <br>
+        Step 2: Convert 3 to binary: 3 = 0011.
+        <br>
+        Result: A3 in binary is 10100011.
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2024 Prepared by Eng. Eslam Ahmed - Page 7
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technical Concepts and Tips</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Chart.js for dynamic visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Styling -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #005B96;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        footer {
+            background: #005B96;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container {
+            padding: 1.5rem 2rem;
+        }
+
+        h1, h2, h3 {
+            color: #005B96;
+        }
+
+        .important-tip, .quick-tip {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .important-tip {
+            background-color: #E6F7FF;
+            border-left: 5px solid #005B96;
+        }
+
+        .quick-tip {
+            background-color: #CFFFD3;
+            border-left: 5px solid #006400;
+        }
+
+        .example-box {
+            background-color: #FFE699;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+
+        .explanation {
+            background-color: #CFFFD3;
+            border-left: 5px solid black;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        .diagram {
+            display: block;
+            margin: 1rem auto;
+            max-width: 100%;
+        }
+
+        .table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .table th {
+            background-color: #005B96;
+            color: white;
+        }
+
+        .interactive-section {
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Technical Concepts and Tips</h1>
+    <h3>Prepared by Eng. Eslam Ahmed</h3>
+</header>
+
+<div class="container">
+    <h2>Signed Binary Arithmetic: Two's Complement Addition</h2>
+    <div class="explanation">
+        <strong>Explanation:</strong> In binary arithmetic, signed numbers are often represented using two's complement notation. During addition, carry bits can overflow beyond the fixed bit length, impacting the final result. Here's how binary addition works with signed numbers.
+    </div>
+
+    <!-- Signed Binary Addition Simulator -->
+    <div class="interactive-section">
+        <h3>Interactive Two's Complement Signed Binary Addition</h3>
+        <form id="signedAdditionForm">
+            <label for="binaryInput1">Enter the first 4-bit binary number (signed):</label>
+            <input type="text" id="binaryInput1" name="binaryInput1" placeholder="e.g., 1101 (for -3)">
+            <br>
+            <label for="binaryInput2">Enter the second 4-bit binary number (signed):</label>
+            <input type="text" id="binaryInput2" name="binaryInput2" placeholder="e.g., 0110 (for 6)">
+            <br>
+            <button type="button" onclick="performSignedBinaryAddition()">Add</button>
+        </form>
+        <div class="important-tip">
+            <strong>Binary Addition Result:</strong> 
+            <span id="signedAdditionResult">Result = ?</span>
+        </div>
+    </div>
+
+    <!-- Script for signed binary addition with carry -->
+    <script>
+        function performSignedBinaryAddition() {
+            const binaryInput1 = document.getElementById('binaryInput1').value;
+            const binaryInput2 = document.getElementById('binaryInput2').value;
+
+            // Validate input: make sure they are 4-bit signed binary numbers
+            if (!/^[01]{4}$/.test(binaryInput1) || !/^[01]{4}$/.test(binaryInput2)) {
+                document.getElementById('signedAdditionResult').innerText = "Invalid binary numbers. Please enter valid 4-bit binary numbers.";
+                return;
+            }
+
+            // Convert binary to decimal (two's complement for signed)
+            const decimal1 = parseInt(binaryInput1, 2) >= 8 ? parseInt(binaryInput1, 2) - 16 : parseInt(binaryInput1, 2);
+            const decimal2 = parseInt(binaryInput2, 2) >= 8 ? parseInt(binaryInput2, 2) - 16 : parseInt(binaryInput2, 2);
+
+            // Perform addition and convert the result back to binary (two's complement)
+            let result = decimal1 + decimal2;
+            let carry = false;
+
+            // Check for overflow (carry beyond 4 bits)
+            if (result >= 8 || result < -8) {
+                carry = true;
+                result = result & 0b1111;  // Keep only 4 bits
+            }
+
+            // Convert the result to binary, considering two's complement representation
+            const binaryResult = (result < 0 ? (16 + result) : result).toString(2).padStart(4, '0');
+
+            // Display result with carry info
+            document.getElementById('signedAdditionResult').innerText = `Result = ${binaryResult} (Carry: ${carry ? 'Yes' : 'No'})`;
+        }
+    </script>
+
+    <div class="important-tip">
+        <strong>Important Tip:</strong> When performing signed binary addition, always check for carry bits. If there's overflow beyond the fixed bit width, it can lead to incorrect results.
+    </div>
+
+    <!-- Signed Binary Addition Example -->
+    <h3>Example of Signed Binary Addition</h3>
+    <div class="example-box">
+        Example: Add 1101 (-3 in two's complement) and 0110 (6 in two's complement).
+        <br> 
+        <code>
+        1101 <br>
+        +0110 <br>
+        ------
+        0011 (Carry: No)
+        </code>
+        <br> Explanation: The two's complement addition of -3 and 6 results in 3 without carry overflow.
+    </div>
+
+    <!-- Visualizing Carry Overflow -->
+    <h3>Visualizing Carry Overflow</h3>
+    <canvas id="carryOverflowChart"></canvas>
+
+    <script>
+        const ctx = document.getElementById('carryOverflowChart').getContext('2d');
+        const carryOverflowChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Addition w/o Carry', 'Addition w/ Carry'],
+                datasets: [{
+                    label: 'Signed Binary Addition',
+                    data: [3, -9],  // Example results: 3 without carry, -9 with carry overflow
+                    backgroundColor: ['#005B96', '#FF6347'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+    <div class="quick-tip">
+        <strong>Quick Tip:</strong> When adding signed numbers using two’s complement, watch for carry overflow, especially when dealing with a fixed number of bits.
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2024 Prepared by Eng. Eslam Ahmed - Page 8
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technical Concepts and Tips</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Chart.js for dynamic visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Styling -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #005B96;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        footer {
+            background: #005B96;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container {
+            padding: 1.5rem 2rem;
+        }
+
+        h1, h2, h3 {
+            color: #005B96;
+        }
+
+        .important-tip, .quick-tip {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .important-tip {
+            background-color: #E6F7FF;
+            border-left: 5px solid #005B96;
+        }
+
+        .quick-tip {
+            background-color: #CFFFD3;
+            border-left: 5px solid #006400;
+        }
+
+        .example-box {
+            background-color: #FFE699;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+
+        .explanation {
+            background-color: #CFFFD3;
+            border-left: 5px solid black;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        .diagram {
+            display: block;
+            margin: 1rem auto;
+            max-width: 100%;
+        }
+
+        .table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .table th {
+            background-color: #005B96;
+            color: white;
+        }
+
+        .interactive-section {
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Technical Concepts and Tips</h1>
+    <h3>Prepared by Eng. Eslam Ahmed</h3>
+</header>
+
+<div class="container">
+    <h2>Memory and Storage Technologies</h2>
+
+    <!-- Memory Capacity Visualizer -->
+    <div class="interactive-section">
+        <h3>Interactive Memory Capacity Visualizer</h3>
+        <form id="memoryVisualizerForm">
+            <label for="memoryInput">Enter memory capacity in GB (e.g., 256):</label>
+            <input type="number" id="memoryInput" name="memoryInput" placeholder="e.g., 256">
+            <button type="button" onclick="visualizeMemoryCapacity()">Visualize</button>
+        </form>
+        <div class="important-tip">
+            <strong>Visualization:</strong> 
+            <canvas id="memoryCapacityChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Script for visualizing memory capacity -->
+    <script>
+        function visualizeMemoryCapacity() {
+            const memoryInput = parseInt(document.getElementById('memoryInput').value);
+            if (isNaN(memoryInput) || memoryInput <= 0) {
+                alert('Please enter a valid memory capacity.');
+                return;
+            }
+
+            const ctx = document.getElementById('memoryCapacityChart').getContext('2d');
+            const memoryCapacityChart = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['Used Memory', 'Free Memory'],
+                    datasets: [{
+                        label: 'Memory Capacity',
+                        data: [memoryInput * 0.7, memoryInput * 0.3],  // Assuming 70% used, 30% free
+                        backgroundColor: ['#FF6347', '#00BFFF'],
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                }
+            });
+        }
+    </script>
+
+    <div class="important-tip">
+        <strong>Important Tip:</strong> Memory capacity determines how much data can be stored temporarily in a system’s RAM. Storage devices hold data permanently, while RAM holds data for quick access while the system is running.
+    </div>
+
+    <!-- Visualizing Mass Storage Devices -->
+    <h3>Visualizing Mass Storage Devices</h3>
+    <div class="interactive-section">
+        <canvas id="storageDevicesChart"></canvas>
+    </div>
+
+    <script>
+        const ctxStorage = document.getElementById('storageDevicesChart').getContext('2d');
+        const storageDevicesChart = new Chart(ctxStorage, {
+            type: 'bar',
+            data: {
+                labels: ['HDD (1TB)', 'SSD (512GB)', 'USB Drive (64GB)', 'CD (700MB)'],
+                datasets: [{
+                    label: 'Storage Capacity (GB)',
+                    data: [1000, 512, 64, 0.7],
+                    backgroundColor: ['#FFB6C1', '#8A2BE2', '#3CB371', '#FFD700'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+
+    <div class="important-tip">
+        <strong>Important Tip:</strong> Different types of storage devices vary in capacity and speed. For example, SSDs are much faster than traditional HDDs, but HDDs offer higher storage capacity at a lower cost.
+    </div>
+
+    <!-- Flash Memory Technology -->
+    <h2>Flash Memory Technology</h2>
+    <div class="explanation">
+        <strong>Explanation:</strong> Flash memory is non-volatile, meaning it retains data even when power is turned off. It’s widely used in devices like USB drives, SD cards, and SSDs.
+    </div>
+
+    <!-- Flash Memory Usage Visualizer -->
+    <div class="interactive-section">
+        <h3>Interactive Flash Memory Usage Visualizer</h3>
+        <form id="flashMemoryForm">
+            <label for="flashSizeInput">Enter flash memory size in GB (e.g., 64):</label>
+            <input type="number" id="flashSizeInput" name="flashSizeInput" placeholder="e.g., 64">
+            <br>
+            <label for="dataStoredInput">Enter data stored in GB (e.g., 32):</label>
+            <input type="number" id="dataStoredInput" name="dataStoredInput" placeholder="e.g., 32">
+            <br>
+            <button type="button" onclick="visualizeFlashMemory()">Visualize</button>
+        </form>
+        <div class="important-tip">
+            <strong>Visualization:</strong> 
+            <canvas id="flashMemoryChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Script for flash memory usage visualization -->
+    <script>
+        function visualizeFlashMemory() {
+            const flashSize = parseInt(document.getElementById('flashSizeInput').value);
+            const dataStored = parseInt(document.getElementById('dataStoredInput').value);
+
+            if (isNaN(flashSize) || isNaN(dataStored) || flashSize <= 0 || dataStored < 0 || dataStored > flashSize) {
+                alert('Please enter valid values.');
+                return;
+            }
+
+            const ctxFlash = document.getElementById('flashMemoryChart').getContext('2d');
+            const flashMemoryChart = new Chart(ctxFlash, {
+                type: 'pie',
+                data: {
+                    labels: ['Used Memory', 'Free Memory'],
+                    datasets: [{
+                        label: 'Flash Memory Usage',
+                        data: [dataStored, flashSize - dataStored],
+                        backgroundColor: ['#3CB371', '#FFD700'],
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true
+                }
+            });
+        }
+    </script>
+
+    <div class="quick-tip">
+        <strong>Quick Tip:</strong> Flash memory is more reliable than HDDs as it has no moving parts, and it’s commonly used in portable storage devices due to its durability and speed.
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2024 Prepared by Eng. Eslam Ahmed - Page 9
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technical Concepts and Tips</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Chart.js for dynamic visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Styling -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #005B96;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        footer {
+            background: #005B96;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container {
+            padding: 1.5rem 2rem;
+        }
+
+        h1, h2, h3 {
+            color: #005B96;
+        }
+
+        .important-tip, .quick-tip {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .important-tip {
+            background-color: #E6F7FF;
+            border-left: 5px solid #005B96;
+        }
+
+        .quick-tip {
+            background-color: #CFFFD3;
+            border-left: 5px solid #006400;
+        }
+
+        .example-box {
+            background-color: #FFE699;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+
+        .explanation {
+            background-color: #CFFFD3;
+            border-left: 5px solid black;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        .diagram {
+            display: block;
+            margin: 1rem auto;
+            max-width: 100%;
+        }
+
+        .table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .table th {
+            background-color: #005B96;
+            color: white;
+        }
+
+        .interactive-section {
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Technical Concepts and Tips</h1>
+    <h3>Prepared by Eng. Eslam Ahmed</h3>
+</header>
+
+<div class="container">
+    <h2>Data Representation: ASCII and Unicode</h2>
+    <div class="explanation">
+        <strong>Explanation:</strong> Computers represent text using encoding standards like **ASCII** (for basic Latin characters) and **Unicode** (for international text). These standards assign a numeric code to each character, which is stored as binary data.
+    </div>
+
+    <!-- ASCII Character Converter -->
+    <div class="interactive-section">
+        <h3>Interactive ASCII Converter</h3>
+        <form id="asciiForm">
+            <label for="asciiInput">Enter a character to get its ASCII code:</label>
+            <input type="text" id="asciiInput" name="asciiInput" maxlength="1" placeholder="e.g., A">
+            <button type="button" onclick="convertToASCII()">Convert</button>
+        </form>
+        <div class="important-tip">
+            <strong>ASCII Code:</strong> 
+            <span id="asciiOutput">Code = ?</span>
+        </div>
+    </div>
+
+    <!-- Script for ASCII conversion -->
+    <script>
+        function convertToASCII() {
+            const asciiInput = document.getElementById('asciiInput').value;
+            if (asciiInput.length === 1) {
+                const asciiCode = asciiInput.charCodeAt(0);
+                document.getElementById('asciiOutput').innerText = `Code = ${asciiCode}`;
+            } else {
+                document.getElementById('asciiOutput').innerText = "Please enter a single character.";
+            }
+        }
+    </script>
+
+    <div class="important-tip">
+        <strong>Important Tip:</strong> ASCII (American Standard Code for Information Interchange) uses 7 or 8 bits to represent characters, covering letters, digits, and some symbols.
+    </div>
+
+    <!-- Unicode Character Converter -->
+    <h3>Interactive Unicode Converter</h3>
+    <div class="interactive-section">
+        <form id="unicodeForm">
+            <label for="unicodeInput">Enter a character to get its Unicode code:</label>
+            <input type="text" id="unicodeInput" name="unicodeInput" maxlength="1" placeholder="e.g., 你">
+            <button type="button" onclick="convertToUnicode()">Convert</button>
+        </form>
+        <div class="important-tip">
+            <strong>Unicode Code:</strong> 
+            <span id="unicodeOutput">Code = ?</span>
+        </div>
+    </div>
+
+    <!-- Script for Unicode conversion -->
+    <script>
+        function convertToUnicode() {
+            const unicodeInput = document.getElementById('unicodeInput').value;
+            if (unicodeInput.length === 1) {
+                const unicodeCode = unicodeInput.codePointAt(0);
+                document.getElementById('unicodeOutput').innerText = `Code = U+${unicodeCode.toString(16).toUpperCase()}`;
+            } else {
+                document.getElementById('unicodeOutput').innerText = "Please enter a single character.";
+            }
+        }
+    </script>
+
+    <div class="important-tip">
+        <strong>Important Tip:</strong> Unicode uses different encoding formats (e.g., UTF-8, UTF-16) to represent characters from multiple languages. It can handle millions of characters, making it ideal for internationalization.
+    </div>
+
+    <!-- ASCII vs Unicode Chart -->
+    <h3>Visualizing ASCII vs Unicode</h3>
+    <div class="interactive-section">
+        <canvas id="asciiUnicodeChart"></canvas>
+    </div>
+
+    <script>
+        const ctxASCIIUnicode = document.getElementById('asciiUnicodeChart').getContext('2d');
+        const asciiUnicodeChart = new Chart(ctxASCIIUnicode, {
+            type: 'bar',
+            data: {
+                labels: ['ASCII (128 chars)', 'Unicode (1M+ chars)'],
+                datasets: [{
+                    label: 'Character Count',
+                    data: [128, 1114112],  // ASCII supports 128 characters, Unicode supports over 1 million
+                    backgroundColor: ['#3CB371', '#FFD700'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+
+    <div class="important-tip">
+        <strong>Important Tip:</strong> While ASCII is limited to 128 characters (or 256 for extended ASCII), Unicode supports more than a million characters, allowing it to handle almost every written language.
+    </div>
+
+    <!-- Encoding Chart -->
+    <h3>Encoding: UTF-8 vs UTF-16</h3>
+    <div class="interactive-section">
+        <canvas id="encodingChart"></canvas>
+    </div>
+
+    <script>
+        const ctxEncoding = document.getElementById('encodingChart').getContext('2d');
+        const encodingChart = new Chart(ctxEncoding, {
+            type: 'doughnut',
+            data: {
+                labels: ['UTF-8 (1-4 bytes)', 'UTF-16 (2 or 4 bytes)'],
+                datasets: [{
+                    label: 'Bytes Used per Character',
+                    data: [4, 2],
+                    backgroundColor: ['#FF6347', '#00BFFF'],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+
+    <div class="quick-tip">
+        <strong>Quick Tip:</strong> UTF-8 is widely used on the web because it is more space-efficient for representing common Latin characters, while UTF-16 is more efficient for characters like Chinese or Japanese that use 2 or more bytes.
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2024 Prepared by Eng. Eslam Ahmed - Page 10
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technical Concepts and Tips</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Chart.js for dynamic visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Styling -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #005B96;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        footer {
+            background: #005B96;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container {
+            padding: 1.5rem 2rem;
+        }
+
+        h1, h2, h3 {
+            color: #005B96;
+        }
+
+        .important-tip, .quick-tip {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .important-tip {
+            background-color: #E6F7FF;
+            border-left: 5px solid #005B96;
+        }
+
+        .quick-tip {
+            background-color: #CFFFD3;
+            border-left: 5px solid #006400;
+        }
+
+        .example-box {
+            background-color: #FFE699;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+
+        .explanation {
+            background-color: #CFFFD3;
+            border-left: 5px solid black;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        .diagram {
+            display: block;
+            margin: 1rem auto;
+            max-width: 100%;
+        }
+
+        .table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .table th {
+            background-color: #005B96;
+            color: white;
+        }
+
+        .interactive-section {
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Technical Concepts and Tips</h1>
+    <h3>Prepared by Eng. Eslam Ahmed</h3>
+</header>
+
+<div class="container">
+    <h2>Logic Gates and Truth Tables</h2>
+    <div class="explanation">
+        <strong>Explanation:</strong> Logic gates are the building blocks of digital circuits. They perform basic Boolean operations like AND, OR, XOR, and NOT, and are essential in creating circuits that process binary data.
+    </div>
+
+    <!-- Interactive Logic Gates Visualization -->
+    <div class="interactive-section">
+        <h3>Interactive Logic Gate Simulator</h3>
+        <form id="logicGateForm">
+            <label for="inputA">Input A:</label>
+            <select id="inputA">
+                <option value="0">0</option>
+                <option value="1">1</option>
+            </select>
+            <br>
+            <label for="inputB">Input B:</label>
+            <select id="inputB">
+                <option value="0">0</option>
+                <option value="1">1</option>
+            </select>
+            <br>
+            <label for="gate">Choose a Logic Gate:</label>
+            <select id="gate">
+                <option value="AND">AND</option>
+                <option value="OR">OR</option>
+                <option value="XOR">XOR</option>
+                <option value="NOT">NOT (applies to A only)</option>
+            </select>
+            <br>
+            <button type="button" onclick="simulateLogicGate()">Simulate</button>
+        </form>
+        <div class="important-tip">
+            <strong>Logic Gate Output:</strong> 
+            <span id="gateOutput">Output = ?</span>
+        </div>
+    </div>
+
+    <!-- Script for Logic Gate Simulation -->
+    <script>
+        function simulateLogicGate() {
+            const inputA = parseInt(document.getElementById('inputA').value);
+            const inputB = parseInt(document.getElementById('inputB').value);
+            const gate = document.getElementById('gate').value;
+
+            let output;
+
+            switch (gate) {
+                case 'AND':
+                    output = inputA && inputB;
+                    break;
+                case 'OR':
+                    output = inputA || inputB;
+                    break;
+                case 'XOR':
+                    output = inputA ^ inputB;
+                    break;
+                case 'NOT':
+                    output = !inputA ? 1 : 0;
+                    break;
+                default:
+                    output = '?';
+            }
+
+            document.getElementById('gateOutput').innerText = `Output = ${output}`;
+        }
+    </script>
+
+    <div class="important-tip">
+        <strong>Important Tip:</strong> Each logic gate has its own truth table, showing how it behaves with all possible input combinations.
+    </div>
+
+    <!-- Visualizing Logic Gate Truth Tables -->
+    <h3>Logic Gate Truth Tables</h3>
+    <div class="interactive-section">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Input A</th>
+                    <th>Input B</th>
+                    <th>AND</th>
+                    <th>OR</th>
+                    <th>XOR</th>
+                </tr>
+            </thead>
+            <tbody id="truthTableBody">
+                <!-- Populated dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function generateTruthTable() {
+            const truthTableBody = document.getElementById('truthTableBody');
+            truthTableBody.innerHTML = '';  // Clear existing content
+
+            const inputs = [[0, 0], [0, 1], [1, 0], [1, 1]];
+
+            inputs.forEach(pair => {
+                const [inputA, inputB] = pair;
+                const andResult = inputA && inputB;
+                const orResult = inputA || inputB;
+                const xorResult = inputA ^ inputB;
+
+                const row = `<tr>
+                    <td>${inputA}</td>
+                    <td>${inputB}</td>
+                    <td>${andResult}</td>
+                    <td>${orResult}</td>
+                    <td>${xorResult}</td>
+                </tr>`;
+
+                truthTableBody.innerHTML += row;
+            });
+        }
+
+        // Generate the truth table on page load
+        window.onload = generateTruthTable;
+    </script>
+
+    <div class="important-tip">
+        <strong>Important Tip:</strong> The truth table shows how each logic gate evaluates its inputs and produces an output.
+    </div>
+
+    <!-- Visualizing Logic Gate Combinations -->
+    <h3>Visualizing Logic Gate Combinations</h3>
+    <canvas id="gateCombinationChart"></canvas>
+
+    <script>
+        const ctxGateCombination = document.getElementById('gateCombinationChart').getContext('2d');
+        const gateCombinationChart = new Chart(ctxGateCombination, {
+            type: 'radar',
+            data: {
+                labels: ['AND', 'OR', 'XOR'],
+                datasets: [{
+                    label: 'Logic Gate Operations',
+                    data: [1, 1, 0],  // Example data for input A=1 and B=1
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    r: {
+                        angleLines: {
+                            display: false
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 1
+                    }
+                }
+            }
+        });
+    </script>
+
+    <div class="quick-tip">
+        <strong>Quick Tip:</strong> Logic gates can be combined to create complex circuits that perform more advanced operations, such as addition and subtraction in binary.
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2024 Prepared by Eng. Eslam Ahmed - Page 11
+</footer>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technical Concepts and Tips</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Chart.js for dynamic visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Styling -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #005B96;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        footer {
+            background: #005B96;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container {
+            padding: 1.5rem 2rem;
+        }
+
+        h1, h2, h3 {
+            color: #005B96;
+        }
+
+        .important-tip, .quick-tip {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .important-tip {
+            background-color: #E6F7FF;
+            border-left: 5px solid #005B96;
+        }
+
+        .quick-tip {
+            background-color: #CFFFD3;
+            border-left: 5px solid #006400;
+        }
+
+        .example-box {
+            background-color: #FFE699;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+
+        .explanation {
+            background-color: #CFFFD3;
+            border-left: 5px solid black;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        .diagram {
+            display: block;
+            margin: 1rem auto;
+            max-width: 100%;
+        }
+
+        .table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .table th {
+            background-color: #005B96;
+            color: white;
+        }
+
+        .interactive-section {
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Technical Concepts and Tips</h1>
+    <h3>Prepared by Eng. Eslam Ahmed</h3>
+</header>
+
+<div class="container">
+    <h2>Boolean Expressions and Circuit Diagrams</h2>
+    <div class="explanation">
+        <strong>Explanation:</strong> Boolean expressions define the logical relationships between variables. These expressions can be simplified using Boolean algebra rules and then implemented as digital circuits using gates like AND, OR, and NOT.
+    </div>
+
+    <!-- Boolean Expression Simplifier -->
+    <div class="interactive-section">
+        <h3>Interactive Boolean Expression Simplifier</h3>
+        <form id="booleanExpressionForm">
+            <label for="booleanExpression">Enter a Boolean expression (e.g., A AND B OR NOT C):</label>
+            <input type="text" id="booleanExpression" name="booleanExpression" placeholder="e.g., A && B || !C">
+            <button type="button" onclick="simplifyBoolean()">Simplify</button>
+        </form>
+        <div class="important-tip">
+            <strong>Simplified Boolean Expression:</strong> 
+            <span id="simplifiedExpression">Simplified = ?</span>
+        </div>
+    </div>
+
+    <!-- Script for Boolean Expression Simplification -->
+    <script>
+        function simplifyBoolean() {
+            let expression = document.getElementById('booleanExpression').value;
+
+            // Example: simple expression parser to show the concept (in a real case, more robust parsing or library needed)
+            expression = expression.replace(/\sAND\s/g, ' && ').replace(/\sOR\s/g, ' || ').replace(/\sNOT\s/g, '!');
+
+            // Here we would use a library for Boolean simplification, but for now, we'll assume this is our "simplified" expression
+            document.getElementById('simplifiedExpression').innerText = `Simplified = ${expression}`;
+        }
+    </script>
+
+    <div class="important-tip">
+        <strong>Important Tip:</strong> Boolean expressions can often be simplified to reduce the number of gates needed in a circuit, saving space and power.
+    </div>
+
+    <!-- Circuit Diagram Generator -->
+    <h3>Interactive Circuit Diagram Generator</h3>
+    <div class="interactive-section">
+        <form id="circuitForm">
+            <label for="gateSelection">Choose Gates (e.g., AND, OR, NOT):</label>
+            <input type="text" id="gateSelection" name="gateSelection" placeholder="e.g., AND, OR, NOT">
+            <button type="button" onclick="generateCircuit()">Generate Circuit Diagram</button>
+        </form>
+        <div class="important-tip">
+            <strong>Generated Circuit Diagram:</strong> 
+            <canvas id="circuitDiagram" width="400" height="300"></canvas>
+        </div>
+    </div>
+
+    <!-- Script for Circuit Diagram Generation -->
+    <script>
+        function generateCircuit() {
+            const gates = document.getElementById('gateSelection').value.split(',');
+
+            // Simple diagram generator (this is a placeholder, a real library can be used for more advanced diagrams)
+            const canvas = document.getElementById('circuitDiagram');
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#005B96';
+            ctx.font = '16px Arial';
+
+            let x = 50, y = 50;
+            gates.forEach(gate => {
+                ctx.fillText(gate.trim(), x, y);
+                y += 50;  // Move down for next gate
+            });
+
+            ctx.strokeStyle = '#005B96';
+            ctx.beginPath();
+            ctx.moveTo(50, 50);
+            ctx.lineTo(350, 50);
+            ctx.lineTo(350, y - 50);
+            ctx.lineTo(50, y - 50);
+            ctx.stroke();
+        }
+    </script>
+
+    <div class="important-tip">
+        <strong>Important Tip:</strong> The gates you select form a logic circuit. For example, AND gates can combine conditions, and NOT gates invert them. You can use combinations of gates to build more complex circuits.
+    </div>
+
+    <!-- Boolean Expression Visualization -->
+    <h3>Visualizing Boolean Expressions</h3>
+    <canvas id="booleanExpressionChart"></canvas>
+
+    <script>
+        const ctxBoolean = document.getElementById('booleanExpressionChart').getContext('2d');
+        const booleanExpressionChart = new Chart(ctxBoolean, {
+            type: 'bar',
+            data: {
+                labels: ['A AND B', 'A OR B', 'NOT C'],
+                datasets: [{
+                    label: 'Boolean Expressions',
+                    data: [1, 1, 0],  // Example data: 1 for true, 0 for false
+                    backgroundColor: ['#3CB371', '#FFD700', '#FF6347'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 1
+                    }
+                }
+            }
+        });
+    </script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technical Concepts and Tips</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Chart.js for dynamic visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Styling -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #005B96;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        footer {
+            background: #005B96;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .container {
+            padding: 1.5rem 2rem;
+        }
+
+        h1, h2, h3 {
+            color: #005B96;
+        }
+
+        .important-tip, .quick-tip {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .important-tip {
+            background-color: #E6F7FF;
+            border-left: 5px solid #005B96;
+        }
+
+        .quick-tip {
+            background-color: #CFFFD3;
+            border-left: 5px solid #006400;
+        }
+
+        .example-box {
+            background-color: #FFE699;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+
+        .explanation {
+            background-color: #CFFFD3;
+            border-left: 5px solid black;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        .diagram {
+            display: block;
+            margin: 1rem auto;
+            max-width: 100%;
+        }
+
+        .table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .table th {
+            background-color: #005B96;
+            color: white;
+        }
+
+        .interactive-section {
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Technical Concepts and Tips</h1>
+    <h3>Prepared by Eng. Eslam Ahmed</h3>
+</header>
+
+<div class="container">
+    <h2>Two’s Complement Notation and Arithmetic</h2>
+    <div class="explanation">
+        <strong>Explanation:</strong> Two's complement notation is the most common method for representing signed integers in binary. It allows both positive and negative numbers to be represented using the same binary format.
+    </div>
+
+    <ul>
+        <li>The <strong>most significant bit (MSB)</strong> is the sign bit: 0 for positive, 1 for negative.</li>
+        <li>To represent a negative number, take the binary representation of the positive number, invert all bits, and add 1 to the result.</li>
+    </ul>
+
+    <div class="example-box">
+        <h3>Example: Converting -5 to Two's Complement (4 bits)</h3>
+        <ul>
+            <li>Step 1: Write the positive version of the number (5) in binary: <code>0101</code>.</li>
+            <li>Step 2: Invert the bits: <code>1010</code>.</li>
+            <li>Step 3: Add 1 to the result: <code>1011</code>.</li>
+            <li>Result: The two's complement of -5 is <code>1011</code>.</li>
+        </ul>
+    </div>
+
+    <div class="important-tip">
+        <strong>Important Tip:</strong> Always check the sign of the result when performing binary addition, especially with fixed-length binary numbers, to detect overflow.
+    </div>
+
+    <!-- C++ Code Example for Two’s Complement -->
+    <h3>C++ Example: Simulating Two's Complement Conversion</h3>
+    <div class="example-box">
+<pre><code>
+#include &lt;iostream&gt;
+using namespace std;
+
+int twoComplement(int num, int bits) {
+    int mask = (1 &lt;&lt; bits) - 1;
+    return (~num + 1) &amp; mask;
+}
+
+int main() {
+    int num = 5;  // Positive number
+    int bits = 4; // 4-bit representation
+    int twoComp = twoComplement(num, bits);
+    cout &lt;&lt; "Two's complement of " &lt;&lt; num &lt;&lt; " (4-bit) = " &lt;&lt; twoComp &lt;&lt; endl; // Output: 11
+    return 0;
+}
+</code></pre>
+    </div>
+
+    <h2>Conclusion</h2>
+    <div class="explanation">
+        <strong>Explanation:</strong> Throughout this document, we’ve explored essential concepts such as binary arithmetic, Boolean logic, and digital systems. These fundamental principles are crucial for understanding the architecture and operations of modern computing systems.
+    </div>
+
+    <ul>
+        <li>Binary arithmetic forms the basis of all computer operations, from addition to complex floating-point calculations.</li>
+        <li>Boolean logic governs decision-making processes in computers and circuits.</li>
+        <li>Understanding two's complement notation helps in performing operations on signed integers.</li>
+    </ul>
+
+    <div class="important-tip">
+        <strong>Takeaway:</strong> Mastering binary arithmetic, Boolean algebra, and digital systems is essential for developing efficient computer algorithms and designing reliable hardware systems.
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2024 Prepared by Eng. Eslam Ahmed - Final Page
+</footer>
+
+</body>
+</html>
+
+    <div class="quick-tip">
+        <strong>Quick Tip:</strong> Boolean expressions define how variables are related through logical operators. By visualizing these expressions, you can easily see how they behave under different input conditions.
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2024 Prepared by Eng. Eslam Ahmed - Page 12
+</footer>
+
+</body>
+</html>
